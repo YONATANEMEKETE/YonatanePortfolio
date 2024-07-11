@@ -9,7 +9,7 @@ import nextui from './nextui-color.svg';
 import npm from './npm-color.svg';
 import reacthookform from './reacthookform-color.svg';
 import reactquery from './reactquery-color.svg';
-import tailwind from './tailwind-color.svg';
+import tailwind from './tailwindcss-color.svg';
 import reactrouter from './reactrouter-color.svg';
 import shadcn from './shadcnui-color.svg';
 import telegram from './telegram-color.svg';

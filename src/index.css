@@ -24,4 +24,11 @@
     --textGrey: #495057;
     --accent: #08f78b;
   }
+
+  /* body {
+    /* @apply bg-bg; */
+}
+*/ * {
+  outline: none;
+  box-sizing: border-box;
 }
