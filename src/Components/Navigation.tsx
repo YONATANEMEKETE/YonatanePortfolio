@@ -17,18 +17,24 @@ const Navigation = () => {
   };
 
   return (
-    <div
+    <motion.div
+      initial={{ opacity: 0, y: -100, x: '-50%' }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{
+        duration: 1.5,
+        ease: 'easeInOut',
+      }}
       onMouseLeave={handleMouseLeave}
-      className="fixed top-4 left-[50%] -translate-x-[50%] w-fit h-fit px-2 py-1 bg-text rounded-xl  shadow-lg flex items-center gap-x-2 cursor-pointer"
+      className="fixed z-10 top-6 left-[50%] -translate-x-[50%] w-fit h-fit px-1 py-1 bg-bg border-2 border-text rounded-xl  shadow-lg flex items-center gap-x-2 cursor-pointer"
     >
       {navs.map((nav) => (
         <Tab key={nav.text} text={nav.text} setPosition={setPosition} />
       ))}
       <motion.div
         animate={position}
-        className="absolute h-12 w-20 bg-bg rounded-xl"
+        className="absolute h-12 w-20 bg-text rounded-xl"
       ></motion.div>
-    </div>
+    </motion.div>
   );
 };
 
