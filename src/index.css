@@ -1,3 +1,27 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    --bg: #11151c;
+    --bgalt: #343a40;
+    --text: #f8f9fa;
+    --text2: #e9ecef;
+    --textGrey: #adb5bd;
+    --accent: #08f78b;
+
+    /* fonts */
+    --header: 'Bespoke Stencil', sans-serif;
+    --body: 'Supreme', sans-serif;
+  }
+
+  .light {
+    --bg: #dee2e6;
+    --bgalt: #495057;
+    --text: #11151c;
+    --text2: #212529;
+    --textGrey: #495057;
+    --accent: #08f78b;
+  }
+}
