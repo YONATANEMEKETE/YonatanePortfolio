@@ -37,6 +37,7 @@
     --text2: #e9ecef;
     --textGrey: #adb5bd;
     --accent: #08f78b;
+    --imgborder: #08f78b;
 
     /* fonts */
     --header: 'Bespoke Stencil', sans-serif;
@@ -76,6 +77,7 @@
     --text2: #212529;
     --textGrey: #495057;
     --accent: #08f78b;
+    --imgborder: #000000;
   }
 }
 

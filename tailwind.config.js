@@ -30,6 +30,7 @@ module.exports = {
         text2: 'var(--text2)',
         textgrey: 'var(--textGrey)',
         accent: 'var(--accent)',
+        imgborder: 'var(--imgborder)',
 
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',

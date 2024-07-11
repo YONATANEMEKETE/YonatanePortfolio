@@ -1,8 +1,11 @@
+import BgPattern from './ui/BgPattern';
+
 const Hero = () => {
   return (
     <div className="relative z-0 pt-36 h-screen">
+      <BgPattern />
       <div className=" w-fit h-fit mx-auto flex flex-col items-center">
-        <div className="size-[8rem] rounded-full shadow-2xl overflow-hidden bg-accent hover:ring-1 ring-accent transition-all duration-300 mb-6 cursor-pointer">
+        <div className="size-[8rem] rounded-full shadow-2xl overflow-hidden bg-accent border-2 border-accent hover:ring-4 hover:ring-accent transition-all duration-300 mb-6 cursor-pointer">
           <img
             src="https://ik.imagekit.io/6qizpphtd1/Profile%20Pics/About.png?"
             // src="https://ik.imagekit.io/6qizpphtd1/Profile%20Pics/Hero.png?updatedAt=1720685856406"
