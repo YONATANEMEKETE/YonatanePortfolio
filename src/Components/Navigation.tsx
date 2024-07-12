@@ -21,11 +21,14 @@ const Navigation = () => {
       initial={{ opacity: 0, y: -100, x: '-50%' }}
       animate={{ opacity: 1, y: 0 }}
       transition={{
-        duration: 1.5,
+        duration: 0.5,
+        delay: 0.5,
         ease: 'easeInOut',
+        type: 'spring',
+        damping: 10,
       }}
       onMouseLeave={handleMouseLeave}
-      className="fixed z-10 top-6 left-[50%] -translate-x-[50%] w-fit h-fit px-1 py-1 bg-bg border-2 border-text rounded-xl  shadow-lg flex items-center gap-x-2 cursor-pointer"
+      className="fixed z-10 top-6 left-[50%] -translate-x-[50%] w-fit h-fit px-1 py-1 bg-bg border border-text rounded-xl  shadow-lg flex items-center gap-x-2 cursor-pointer"
     >
       {navs.map((nav) => (
         <Tab key={nav.text} text={nav.text} setPosition={setPosition} />

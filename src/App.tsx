@@ -4,7 +4,7 @@ import Home from './Pages/Home';
 
 function App() {
   return (
-    <div className="ligh transition-colors duration-300">
+    <div className=" transition-colors duration-300">
       <Home />
     </div>
   );
