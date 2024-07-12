@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import { TypewriterEffect } from './ui/TypewritterEffect';
 import ButtonHero from './ui/ButtonHero';
 import ButtonHero2 from './ui/ButtonHero2';
+import { infiniteScrolls } from '@/Data/Data';
 
 const Hero = () => {
   const words = [
@@ -21,7 +22,7 @@ const Hero = () => {
   return (
     <div className="relative z-0 pt-48">
       <BgPattern />
-      <div className="w-max h-fit mx-auto flex flex-col items-center mb-20">
+      <div className="w-max h-fit mx-auto flex flex-col items-center mb-32">
         <motion.div
           className="size-[8rem] rounded-xl shadow-2xl overflow-hidden bg-accent border-2 border-accent hover:ring-4 
         hover:ring-accent transition-all duration-300 mb-6 cursor-pointer"
@@ -54,20 +55,34 @@ const Hero = () => {
         <div className=" flex items-center gap-4">
           <ButtonHero />
           <ButtonHero2 />
-          {/* <ShimmerButton
-            className="shadow-2xl"
-            borderRadius="20px"
-            shimmerColor="#08f78b"
-            background="rgba(0, 0, 0, .95)"
-          >
-            <span className="text-textgrey text-lg font-body font-bold">
-              let's connect
-            </span>
-          </ShimmerButton> */}
         </div>
       </div>
+
+      {/* infinte Scroll text */}
+      <InfiniteScroll />
     </div>
   );
 };
 
 export default Hero;
+
+const InfiniteScroll = () => {
+  return (
+    <div className=" w-full bg-transparent">
+      <div className="relative w-full rotate-[1.5deg] mx-auto py-4 bg-bg border-y border-textgrey overflow-hidden">
+        <div className="absolute z-50 left-0 bottom-0 top-0 w-[20%] bg-gradient-to-r from-bg to-transparent"></div>
+        <div className="absolute z-50 right-0 bottom-0 top-0 w-[20%] bg-gradient-to-l from-bg to-transparent"></div>
+        <div className="w-[90%] -translate-x-44 mx-auto flex items-center gap-x-16 flex-nowrap">
+          {infiniteScrolls.map((item, index) => (
+            <p
+              className="text-3xl text-text opacity-50 cursor-pointer hover:opacity-90 transition-all duration-500 font-header font-medium italic shrink-0"
+              key={index}
+            >
+              {item}
+            </p>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
