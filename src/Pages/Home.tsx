@@ -3,7 +3,7 @@ import Navigation from '../Components/Navigation';
 
 const Home = () => {
   return (
-    <div className="bg-bg pb-40">
+    <div className="bg-bg pb-[100vh]">
       <Navigation />
       <Hero />
     </div>

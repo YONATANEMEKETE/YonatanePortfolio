@@ -6,7 +6,7 @@ const BgPattern = () => {
     <>
       <DotPattern
         className={cn(
-          '[mask-image:radial-gradient(500px_circle_at_center,white,transparent)] -z-10 h-screen'
+          '[mask-image:radial-gradient(500px_circle_at_center,white,transparent)] -z-10 h-[110vh]'
         )}
       />
     </>

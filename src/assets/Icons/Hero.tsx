@@ -1,13 +1,11 @@
 import BgPattern from './ui/BgPattern';
 // import ShimmerButton from './magicui/shimmer-button';
 // import { IKContext, IKImage } from 'imagekitio-react';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { TypewriterEffect } from './ui/TypewritterEffect';
 import ButtonHero from './ui/ButtonHero';
 import ButtonHero2 from './ui/ButtonHero2';
-import { heroCardImages, infiniteScrolls } from '@/Data/Data';
-import { useRef } from 'react';
-// import { useRef } from 'react';
+import { infiniteScrolls } from '@/Data/Data';
 
 const Hero = () => {
   const words = [
@@ -64,8 +62,7 @@ const Hero = () => {
       <InfiniteScroll rotate="rotate-[1.5deg]" />
 
       {/* hero cards */}
-      {/* <Herocards /> */}
-      <TextAnimation />
+      <Herocards />
     </div>
   );
 };
@@ -134,78 +131,12 @@ const InfiniteScroll = ({ rotate }: { rotate?: string }) => {
   );
 };
 
-// const Herocards = () => {
-//   const target = useRef(null);
-//   const { scrollYProgress } = useScroll({
-//     target: target,
-//     offset: ['start end', 'end end'],
-//   });
-
-//   const x = useTransform(scrollYProgress, [0, 1], ['100%', '-150%']);
-//   const scale = useTransform(scrollYProgress, [0, 1], [0.9, 1.7]);
-
-//   return (
-//     <div ref={target} className="relative h-[400vh]">
-//       <div className="sticky top-0  h-screen w-full overflow-hidden">
-//         <motion.div
-//           style={{ x, scale }}
-//           className="pl-10 h-screen relative flex items-center justify-start gap-16"
-//         >
-//           {heroCardImages.map((item, index) => (
-//             <img
-//               key={index}
-//               src={item}
-//               alt="webiste"
-//               className="w-[50vw] h-fit  mx-auto object-contain object-top rounded-3xl shadow-xl"
-//             />
-//           ))}
-//         </motion.div>
-//       </div>
-//       <div></div>
-//     </div>
-//   );
-// };
-
-const TextAnimation = () => {
-  const target = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: target,
-    offset: ['start start', 'end end'],
-  });
-
-  const scale = useTransform(scrollYProgress, [0, 1], [1, 2.5]);
-  const scale2 = useTransform(scrollYProgress, [0, 1], [1, 3]);
-  const opacity = useTransform(scrollYProgress, [0, 1], [0, 1]);
-
+const Herocards = () => {
   return (
-    <div ref={target} className="relative h-[400vh]">
-      <motion.div
-        // style={{ scale }}
-        className="sticky top-0 h-screen w-full overflow-hidden"
-      >
-        <motion.div style={{ scale }} className="size-full flex flex-col pt-10">
-          <p className="basis-1/3 w-[60%] pl-10  text-text text-[5rem] font-header font-extrabold leading-[1] drop-shadow-2xl">
-            USER CENTERED <span className="text-accent">DESIGNS</span>
-          </p>
-          <div className="basis-1/3 w-[80%] mx-auto self-center flex-wrap  grid place-content-center mb-6">
-            <motion.p
-              style={{ scale: scale2, opacity }}
-              className="text-accent text-center text-2xl font-header font-extrabold mb-6"
-            >
-              ACCESSIBLE
-            </motion.p>
-            <motion.p
-              style={{ scale: scale2, opacity }}
-              className="text-text text-center text-2xl font-header font-extrabold "
-            >
-              INTERFACE
-            </motion.p>
-          </div>
-          <motion.p className="basis-1/3 self-end text-end w-[50%] pr-10  text-text text-[5rem] font-header font-extrabold leading-[1] drop-shadow-2xl">
-            FAST LOADING <span className="text-accent">TIME</span>
-          </motion.p>
-        </motion.div>
-      </motion.div>
+    <div className="relative h-[300vh]">
+      <div className="sticky top-0 border h-screen overflow-hidden">
+        <div className=" size-full flex items-start gap-x-6">{}</div>
+      </div>
     </div>
   );
 };
