@@ -21,7 +21,7 @@ const AboutMe = () => {
   const varients = {
     initial: {
       opacity: 0,
-      x: '-100%',
+      x: '-30px',
     },
     vissible: {
       opacity: 1,
@@ -160,12 +160,7 @@ const AboutMe = () => {
             </div>
           </div>
         </motion.div>
-        <button
-          className="text-xl text-text font-body font-bold px-4 py-2 bg-transparent border border-accent 
-          hover:border-text hover:text-accent rounded-md "
-        >
-          Hire Me
-        </button>
+        <button className="relative z-40  button">Hire Me</button>
 
         {/* <div>Languages and Tools</div> */}
         <div className="h-[100vh]  pt-4  pl-0">
