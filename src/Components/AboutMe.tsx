@@ -1,8 +1,17 @@
 // import profilepic from '../assets/profilepic.png';
 import profile2 from '../assets/profile2.png';
-import { aboutMe, aboutMe2 } from '@/Data/Data';
+import { aboutMe, aboutMe2, tools } from '@/Data/Data';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
+// import {
+//   react,
+//   next,
+//   tailwind,
+//   typescript,
+//   javascript,
+//   shadcn,
+// } from '../assets/Icons/Icons';
+import IconCloud from './magicui/icon-cloud';
 
 const AboutMe = () => {
   const words = aboutMe.split(' ');
@@ -11,16 +20,18 @@ const AboutMe = () => {
 
   const { scrollYProgress } = useScroll({
     target: target,
-    offset: ['start end', 'start 0.3'],
+    offset: ['start end', 'start 0.2'],
   });
 
+  const y = useTransform(scrollYProgress, [0, 1], [0, '-100%']);
+
   return (
-    <div className="relative w-full h-[150vh]  p-10 px-20  flex items-start gap-x-8">
+    <div className="relative w-full   p-10 px-20  flex items-start gap-x-8">
       <div className="sticky top-20 basis-1/3  pt-4 px-4 flex flex-col">
-        <div className="text-3xl text-text font-body font-bold mb-6 text-center">
+        <div className="text-3xl text-text font-header font-bold mb-6 text-center">
           About <span className="text-accent">Me</span>
         </div>
-        <div className="size-[15rem] bg-accent rounded-lg shadow-2xl drop-shadow-xl hover:ring-4 ring-accent transition-all duration-300 overflow-hidden self-center">
+        <div className="size-[15rem] bg-accent rounded-lg shadow-xl shadow-accent  transition-all duration-300 overflow-hidden self-center">
           <img
             src={profile2}
             alt="yonatane's image"
@@ -29,7 +40,11 @@ const AboutMe = () => {
         </div>
       </div>
       <div className="basis-2/3 h-full pt-20 px-4 space-y-6">
-        <div ref={target} className="relative space-y-8 pb-6">
+        <motion.div
+          ref={target}
+          style={{ y: y }}
+          className="relative space-y-8 pb-6"
+        >
           <div className="space-y-8">
             <div className="flex items-baseline flex-wrap ">
               {words.map((word, index) => {
@@ -119,7 +134,7 @@ const AboutMe = () => {
               })}
             </div>
           </div>
-        </div>
+        </motion.div>
         <button
           className="text-xl text-text font-body font-bold px-4 py-2 bg-transparent border border-accent 
           hover:border-text hover:text-accent rounded-md"
@@ -128,9 +143,30 @@ const AboutMe = () => {
         </button>
 
         {/* <div>Languages and Tools</div> */}
+        <div className="h-[100vh]  pt-4  pl-0">
+          <p className="text-3xl text-text font-header font-bold  mb-4">
+            Languages and Tools
+          </p>
+          <div className="h-[90%] ">
+            <Tools />
+          </div>
+        </div>
       </div>
     </div>
   );
 };
 
 export default AboutMe;
+
+const Tools = () => {
+  const slugs = tools;
+
+  return (
+    <div
+      className="relative grid place-content-center overflow-hidden size-full bg-bg border border-bgalt 
+    rounded-lg shadow-accent shadow-sm px-48 pt-10 pb-20"
+    >
+      <IconCloud iconSlugs={slugs} />
+    </div>
+  );
+};

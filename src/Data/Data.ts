@@ -73,6 +73,36 @@ const bentoIcons1 = [
   nextui,
   npm,
 ];
+
+const tools = [
+  'typescript',
+  'javascript',
+  'react',
+  'html5',
+  'css3',
+  'nextdotjs',
+  'firebase',
+  'vercel',
+  'testinglibrary',
+  'jest',
+  'git',
+  'github',
+  'gitlab',
+  'visualstudiocode',
+  'nextui',
+  'npm',
+  'reacthookform',
+  'reactquery',
+  'tailwindcss',
+  'reactrouter',
+  'shadcnui',
+  'vercel',
+  'vite',
+  'vitest',
+  'greensock',
+  'threedotjs',
+];
+
 const bentoIcons2 = [
   reacthookform,
   reactquery,
@@ -118,4 +148,5 @@ export {
   bentoIcons2,
   socials,
   heroCardImages,
+  tools,
 };
