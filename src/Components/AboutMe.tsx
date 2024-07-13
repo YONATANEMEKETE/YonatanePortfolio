@@ -3,20 +3,13 @@ import profile2 from '../assets/profile2.png';
 import { aboutMe, aboutMe2, tools } from '@/Data/Data';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
-// import {
-//   react,
-//   next,
-//   tailwind,
-//   typescript,
-//   javascript,
-//   shadcn,
-// } from '../assets/Icons/Icons';
 import IconCloud from './magicui/icon-cloud';
 
 const AboutMe = () => {
   const words = aboutMe.split(' ');
   const words2 = aboutMe2.split(' ');
   const target = useRef(null);
+  const container = useRef(null);
 
   const { scrollYProgress } = useScroll({
     target: target,
@@ -25,20 +18,52 @@ const AboutMe = () => {
 
   const y = useTransform(scrollYProgress, [0, 1], [0, '-100%']);
 
+  const varients = {
+    initial: {
+      opacity: 0,
+      x: '-100%',
+    },
+    vissible: {
+      opacity: 1,
+      x: 0,
+    },
+  };
   return (
-    <div className="relative w-full   p-10 px-20  flex items-start gap-x-8">
-      <div className="sticky top-20 basis-1/3  pt-4 px-4 flex flex-col">
-        <div className="text-3xl text-text font-header font-bold mb-6 text-center">
+    <div
+      ref={container}
+      className="relative w-full   p-10 px-20  flex items-start gap-x-8"
+    >
+      <motion.div
+        variants={varients}
+        initial="initial"
+        whileInView="vissible"
+        transition={{
+          duration: 1,
+          type: 'tween',
+          ease: 'easeInOut',
+        }}
+        className="sticky top-20 basis-1/3  pt-4 px-4 flex flex-col"
+      >
+        <motion.div
+          variants={varients}
+          initial="initial"
+          whileInView={'vissible'}
+          transition={{ duration: 1.2, ease: 'easeInOut' }}
+          className="text-3xl text-text font-header font-bold mb-6 text-center"
+        >
           About <span className="text-accent">Me</span>
-        </div>
-        <div className="size-[15rem] bg-accent rounded-lg shadow-xl shadow-accent  transition-all duration-300 overflow-hidden self-center">
+        </motion.div>
+        <motion.div
+          variants={varients}
+          className="size-[15rem] bg-accent rounded-lg shadow-xl shadow-accent  transition-all duration-300 overflow-hidden self-center"
+        >
           <img
             src={profile2}
             alt="yonatane's image"
             className="size-full object-cover object-center"
           />
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
       <div className="basis-2/3 h-full pt-20 px-4 space-y-6">
         <motion.div
           ref={target}
@@ -137,7 +162,7 @@ const AboutMe = () => {
         </motion.div>
         <button
           className="text-xl text-text font-body font-bold px-4 py-2 bg-transparent border border-accent 
-          hover:border-text hover:text-accent rounded-md"
+          hover:border-text hover:text-accent rounded-md "
         >
           Hire Me
         </button>
