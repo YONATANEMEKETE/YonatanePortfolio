@@ -143,7 +143,7 @@ const TextAnimation = () => {
     offset: ['start start', 'end end'],
   });
 
-  const scale = useTransform(scrollYProgress, [0.4, 1], [1, 2.5]);
+  const scale = useTransform(scrollYProgress, [0.3, 1], [1, 2.5]);
   const scale2 = useTransform(scrollYProgress, [0, 1], [1.5, 3]);
   const opacity = useTransform(scrollYProgress, [0, 1], [0, 1]);
 
