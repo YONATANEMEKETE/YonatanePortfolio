@@ -19,9 +19,7 @@ import vitest from './vitest-color.svg';
 import x from './x-color.svg';
 import gsap from './greensock-color.svg';
 import slack from './slack.png';
-import storee from './storeee.png';
 import jobs from './jobs.png';
-import todo from './todo.png';
 
 export {
   react,
@@ -45,7 +43,5 @@ export {
   x,
   gsap,
   slack,
-  storee,
   jobs,
-  todo,
 };

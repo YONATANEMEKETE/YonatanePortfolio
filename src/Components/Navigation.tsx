@@ -21,7 +21,7 @@ const Navigation = () => {
       initial={{ opacity: 0, y: -100, x: '-50%' }}
       animate={{ opacity: 1, y: 0 }}
       transition={{
-        duration: 0.5,
+        duration: 0.3,
         delay: 0.5,
         ease: 'easeInOut',
         type: 'spring',

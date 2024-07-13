@@ -1,13 +1,11 @@
 import BgPattern from './ui/BgPattern';
-// import ShimmerButton from './magicui/shimmer-button';
-// import { IKContext, IKImage } from 'imagekitio-react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { TypewriterEffect } from './ui/TypewritterEffect';
 import ButtonHero from './ui/ButtonHero';
 import ButtonHero2 from './ui/ButtonHero2';
-import { heroCardImages, infiniteScrolls } from '@/Data/Data';
+import { infiniteScrolls } from '@/Data/Data';
 import { useRef } from 'react';
-// import { useRef } from 'react';
+import profilepic from '../assets/profilepic.png';
 
 const Hero = () => {
   const words = [
@@ -26,12 +24,18 @@ const Hero = () => {
       <BgPattern />
       <div className="w-max h-fit mx-auto flex flex-col items-center mb-32">
         <motion.div
-          className="size-[8rem] rounded-xl shadow-2xl overflow-hidden bg-accent border-2 border-accent hover:ring-4 
+          initial={{ opacity: 0, y: -40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{
+            duration: 1.5,
+            ease: 'easeInOut',
+          }}
+          className="size-[8rem] relative rounded-xl shadow-2xl overflow-hidden bg-accent border-2 border-accent hover:ring-4 
         hover:ring-accent transition-all duration-300 mb-6 cursor-pointer"
         >
           <img
-            src="https://ik.imagekit.io/6qizpphtd1/Profile%20Pics/About.png?"
-            // src="https://ik.imagekit.io/6qizpphtd1/Profile%20Pics/Hero.png?updatedAt=1720685856406"
+            // src="https://ik.imagekit.io/6qizpphtd1/Profile%20Pics/About.png?"
+            src={profilepic}
             alt="yonatane's picture"
             className="object-cover w-full h-full object-center"
           />
@@ -134,38 +138,6 @@ const InfiniteScroll = ({ rotate }: { rotate?: string }) => {
   );
 };
 
-// const Herocards = () => {
-//   const target = useRef(null);
-//   const { scrollYProgress } = useScroll({
-//     target: target,
-//     offset: ['start end', 'end end'],
-//   });
-
-//   const x = useTransform(scrollYProgress, [0, 1], ['100%', '-150%']);
-//   const scale = useTransform(scrollYProgress, [0, 1], [0.9, 1.7]);
-
-//   return (
-//     <div ref={target} className="relative h-[400vh]">
-//       <div className="sticky top-0  h-screen w-full overflow-hidden">
-//         <motion.div
-//           style={{ x, scale }}
-//           className="pl-10 h-screen relative flex items-center justify-start gap-16"
-//         >
-//           {heroCardImages.map((item, index) => (
-//             <img
-//               key={index}
-//               src={item}
-//               alt="webiste"
-//               className="w-[50vw] h-fit  mx-auto object-contain object-top rounded-3xl shadow-xl"
-//             />
-//           ))}
-//         </motion.div>
-//       </div>
-//       <div></div>
-//     </div>
-//   );
-// };
-
 const TextAnimation = () => {
   const target = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -174,7 +146,7 @@ const TextAnimation = () => {
   });
 
   const scale = useTransform(scrollYProgress, [0, 1], [1, 2.5]);
-  const scale2 = useTransform(scrollYProgress, [0, 1], [1, 3]);
+  const scale2 = useTransform(scrollYProgress, [0, 1], [1.5, 3]);
   const opacity = useTransform(scrollYProgress, [0, 1], [0, 1]);
 
   return (
@@ -183,10 +155,45 @@ const TextAnimation = () => {
         // style={{ scale }}
         className="sticky top-0 h-screen w-full overflow-hidden"
       >
-        <motion.div style={{ scale }} className="size-full flex flex-col pt-10">
-          <p className="basis-1/3 w-[60%] pl-10  text-text text-[5rem] font-header font-extrabold leading-[1] drop-shadow-2xl">
-            USER CENTERED <span className="text-accent">DESIGNS</span>
-          </p>
+        <motion.div
+          style={{ scale }}
+          className="size-full flex flex-col pt-10 pb-10"
+        >
+          <div className="absolute z-10 top-10 right-10 bg-text h-[20%] w-1"></div>
+          <div className="absolute z-0 top-10 right-10 bg-accent w-[10%] h-1"></div>
+          <div className="absolute z-10 left-10 bottom-16 bg-accent w-[10%] h-1"></div>
+          <div className="absolute left-10 bottom-16 bg-text h-[20%] w-1"></div>
+          <div className="basis-1/3  w-[60%] pl-10">
+            <div className="size-fit overflow-hidden">
+              <motion.p
+                initial={{ y: '100%' }}
+                whileInView={{ y: 0 }}
+                transition={{
+                  duration: 0.8,
+                  ease: 'easeInOut',
+                }}
+                className="text-text text-[5rem] font-header font-extrabold leading-[1] drop-shadow-2xl"
+              >
+                USER CENTERED
+              </motion.p>
+            </div>
+            <div className="size-fit overflow-hidden">
+              <motion.p
+                initial={{ y: '100%' }}
+                whileInView={{ y: 0 }}
+                transition={{
+                  duration: 0.8,
+                  ease: 'easeInOut',
+                }}
+                className="text-accent text-[5rem] font-header font-extrabold leading-[1] drop-shadow-2xl"
+              >
+                DESIGNS
+              </motion.p>
+            </div>
+            {/* <p className=" text-text text-[5rem] font-header font-extrabold leading-[1] drop-shadow-2xl">
+              USER CENTERED <span className="text-accent">DESIGNS</span>
+            </p> */}
+          </div>
           <div className="basis-1/3 w-[80%] mx-auto self-center flex-wrap  grid place-content-center mb-6">
             <motion.p
               style={{ scale: scale2, opacity }}
@@ -201,9 +208,34 @@ const TextAnimation = () => {
               INTERFACE
             </motion.p>
           </div>
-          <motion.p className="basis-1/3 self-end text-end w-[50%] pr-10  text-text text-[5rem] font-header font-extrabold leading-[1] drop-shadow-2xl">
-            FAST LOADING <span className="text-accent">TIME</span>
-          </motion.p>
+          <div className="basis-1/3 text-end self-end w-[50%] pr-10">
+            <div className="w-full h-fit text-end overflow-hidden ">
+              <motion.p
+                initial={{ y: '100%' }}
+                whileInView={{ y: 0 }}
+                transition={{ duration: 0.8, ease: 'easeInOut' }}
+                className="w-full text-end text-accent text-[5rem] font-header font-extrabold leading-[1] drop-shadow-2xl"
+              >
+                FAST
+              </motion.p>
+            </div>
+            <div className="w-full h-fit text-end overflow-hidden ">
+              <motion.p
+                initial={{ y: '100%' }}
+                whileInView={{ y: 0 }}
+                transition={{ duration: 0.8, ease: 'easeInOut' }}
+                className="w-full text-end text-text text-[5rem] font-header font-extrabold leading-[1] drop-shadow-2xl"
+              >
+                LOADING TIME
+              </motion.p>
+            </div>
+            {/* <p className="text-accent text-[5rem] font-header font-extrabold leading-[1] drop-shadow-2xl">
+              FAST
+            </p>
+            <p className="text-text text-[5rem] font-header font-extrabold leading-[1] drop-shadow-2xl">
+              LOADING TIME
+            </p> */}
+          </div>
         </motion.div>
       </motion.div>
     </div>
