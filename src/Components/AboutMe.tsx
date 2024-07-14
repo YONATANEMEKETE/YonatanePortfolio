@@ -31,7 +31,7 @@ const AboutMe = () => {
   return (
     <div
       ref={container}
-      className="relative w-full   p-10 px-20  flex items-start gap-x-8"
+      className="relative w-full max-w-[1540px] mx-auto   p-10 px-20  flex items-start gap-x-8"
     >
       <motion.div
         variants={varients}

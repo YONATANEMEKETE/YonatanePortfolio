@@ -15,8 +15,6 @@ import {
   shadcn,
   telegram,
   vercel,
-  vite,
-  vitest,
   x,
   gsap,
   slack,
@@ -104,15 +102,18 @@ const tools = [
 ];
 
 const bentoIcons2 = [
+  typescript,
+  javascript,
   reacthookform,
+  react,
+  next,
   reactquery,
   tailwind,
-  reactrouter,
   shadcn,
-  vercel,
-  vite,
-  vitest,
   gsap,
+  reactrouter,
+  vercel,
+  git,
 ];
 
 const socials = [
