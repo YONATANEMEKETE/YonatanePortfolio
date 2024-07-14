@@ -10,7 +10,7 @@ const Footer = () => {
 
       <div className="flex items-center justify-between w-[70vw] max-w-[1100px] mx-auto">
         <p className="text-textgrey text-base font-body font-semibold">
-          Copyright © 2022. All right reserved
+          Copyright © 2024. All right reserved
         </p>
         <div className="flex items-center gap-x-4">
           <div className="size-[2rem] p-2 bg-bg rounded-full shadow-sm shadow-accent cursor-pointer">

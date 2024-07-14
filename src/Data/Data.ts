@@ -49,6 +49,14 @@ const infiniteScrolls = [
   'Modern Aesthetics',
   'Performance Optimization',
   'Cross Browser Compatibility',
+  'Responsive Design',
+  'User Experience (UX)',
+  'User Interface (UI)',
+  'Accessibility',
+  'SEO',
+  'Modern Aesthetics',
+  'Performance Optimization',
+  'Cross Browser Compatibility',
 ];
 
 const heroCardImages = [slack, jobs];

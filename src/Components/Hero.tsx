@@ -83,6 +83,7 @@ const InfiniteScroll = ({ rotate }: { rotate?: string }) => {
         <div className="absolute z-50 left-0 bottom-0 top-0 w-[20%] bg-gradient-to-r from-bg to-transparent"></div>
         <div className="absolute z-50 right-0 bottom-0 top-0 w-[20%] bg-gradient-to-l from-bg to-transparent"></div>
         <motion.div
+          initial={{ x: 0 }}
           animate={{
             x: '-100%',
           }}
@@ -112,7 +113,7 @@ const InfiniteScroll = ({ rotate }: { rotate?: string }) => {
         <motion.div
           initial={{ x: '-100%' }}
           animate={{
-            x: 0,
+            x: '0',
           }}
           transition={{
             repeat: Infinity,
@@ -166,6 +167,7 @@ const TextAnimation = () => {
               <motion.p
                 initial={{ y: '100%' }}
                 whileInView={{ y: 0 }}
+                viewport={{ once: true }}
                 transition={{
                   duration: 0.8,
                   ease: 'easeInOut',
@@ -179,6 +181,7 @@ const TextAnimation = () => {
               <motion.p
                 initial={{ y: '100%' }}
                 whileInView={{ y: 0 }}
+                viewport={{ once: true }}
                 transition={{
                   duration: 0.8,
                   ease: 'easeInOut',
@@ -211,6 +214,7 @@ const TextAnimation = () => {
               <motion.p
                 initial={{ y: '100%' }}
                 whileInView={{ y: 0 }}
+                viewport={{ once: true }}
                 transition={{ duration: 0.8, ease: 'easeInOut' }}
                 className="w-full text-end text-accent text-[5rem] font-header font-extrabold leading-[1] drop-shadow-2xl"
               >
@@ -221,6 +225,7 @@ const TextAnimation = () => {
               <motion.p
                 initial={{ y: '100%' }}
                 whileInView={{ y: 0 }}
+                viewport={{ once: true }}
                 transition={{ duration: 0.8, ease: 'easeInOut' }}
                 className="w-full text-end text-text text-[5rem] font-header font-extrabold leading-[1] drop-shadow-2xl"
               >
