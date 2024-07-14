@@ -8,12 +8,12 @@ import { motion } from 'framer-motion';
 
 const Projects = () => {
   return (
-    <div className="w-full max-w-[1540px] mx-auto h-[80vw] min-[1500px]:h-[60vw] pt-40 px-36 space-y-10">
-      <p className="text-5xl text-text font-header font-bold">
+    <div className="w-full overflow-hidden max-w-[1540px] mx-auto h-max min-[1500px]:h-[60vw] pt-40 px-4 md:px-12 lg:px-20 xl:px-36 space-y-10">
+      <p className="text-2xl md:text-3xl lg:text-5xl  text-text font-header font-bold">
         Proj<span className="text-accent">ects</span>
       </p>
-      <div className="w-full h-[80%] grid grid-cols-5 grid-rows-2 gap-4">
-        <div className="relative group bg-[#080908]  shadow-text shadow-sm  rounded-2xl col-span-3 pt-4 pb-2 px-4 cursor-pointer">
+      <div className="w-full min-w-[350px] h-fit grid grid-cols-4 grid-rows-4 min-[1100px]:grid-cols-5 min-[1100px]:grid-rows-3  gap-4 ">
+        <div className="relative h-[20rem] group bg-[#080908]  shadow-text shadow-sm  rounded-2xl col-span-4 min-[1100px]:col-span-3 pt-4 pb-2 px-4 cursor-pointer">
           <div className="relative w-full h-[80%] rounded-xl overflow-hidden mb-4">
             <div className="absolute z-10 inset-0 drop-shadow-lg rounded-xl bg-bg opacity-20"></div>
             <div className="absolute z-0 inset-0  rounded-xl bg-gradient-to-br from-bg to-transparent opacity-50"></div>
@@ -24,14 +24,14 @@ const Projects = () => {
             />
           </div>
           <div className="flex items-start justify-between px-4">
-            <div className="text-xl text-text font-header font-bold w-max">
+            <div className="text-base md:text-xl text-text font-header font-bold w-max">
               Slack Clone Website
             </div>
             <button className="relative z-40 button">Live Preview</button>
           </div>
         </div>
 
-        <div className="rounded-xl col-span-2 flex flex-col justify-between">
+        <div className="rounded-xl h-[20rem] col-span-2  flex flex-col justify-between">
           <div className="relative h-[25%] bg-[#080908] rounded-xl shadow-sm shadow-text  p-4 overflow-hidden cursor-pointer">
             <div className="absolute rounded-xl inset-0 bg-gradient-to-r from-bg to-transparent"></div>
             <motion.div
@@ -45,13 +45,13 @@ const Projects = () => {
               }}
               className="size-full rounded-xl flex items-center gap-x-10 flex-nowrap -translate-x-12"
             >
-              <p className="text-5xl  text-text opacity-20 hover:opacity-100 transition-all duration-300 font-header font-bold shrink-0">
+              <p className="text-2xl md:text-5xl  text-text opacity-20 hover:opacity-100 transition-all duration-300 font-header font-bold shrink-0">
                 Frontend <span className="text-accent">Developer</span>
               </p>
-              <p className="text-5xl  text-text opacity-20 hover:opacity-100 transition-all duration-300 font-header font-bold shrink-0">
+              <p className="text-2xl md:text-5xl  text-text opacity-20 hover:opacity-100 transition-all duration-300 font-header font-bold shrink-0">
                 USER <span className="text-accent">EXPERIENCE(UX)</span>
               </p>
-              <p className="text-5xl  text-text opacity-20 hover:opacity-100 transition-all duration-300 font-header font-bold shrink-0">
+              <p className="text-2xl md:text-5xl  text-text opacity-20 hover:opacity-100 transition-all duration-300 font-header font-bold shrink-0">
                 USER <span className="text-accent">INTERFACE(UI)</span>
               </p>
             </motion.div>
@@ -67,7 +67,10 @@ const Projects = () => {
             <div className="bg-[#080908] basis-[50%] rounded-xl shadow-sm shadow-text p-2 ">
               <div className="size-full px-1 pt-2 rounded-xl flex justify-center flex-wrap">
                 {bentoIcons2.map((icon, i) => (
-                  <div key={i} className="p-2 size-[3.5rem] rounded-lg">
+                  <div
+                    key={i}
+                    className="p-2 size-[2.5rem] lg:size-[3rem] rounded-lg"
+                  >
                     <img
                       src={icon}
                       alt="icon"
@@ -79,7 +82,7 @@ const Projects = () => {
             </div>
           </div>
         </div>
-        <div className="bg-[#080908] shadow-text shadow-sm rounded-2xl pt-4 px-4 cursor-pointer flex flex-col items-center">
+        <div className="bg-[#080908] h-[20rem] col-span-2 min-[1100px]:col-span-1 shadow-text shadow-sm rounded-2xl pt-2 md:pt-4 px-1 md:px-4 cursor-pointer flex flex-col items-end lg:items-center">
           <div className="group relative w-full h-[80%] rounded-xl overflow-hidden mb-4">
             <div className="absolute inset-0 rounded-lg opacity-40 bg-gradient-to-b from-bg to-transparent"></div>
             <div className="absolute inset-0 rounded-lg opacity-40 bg-gradient-to-t from-bg to-transparent"></div>
@@ -89,9 +92,9 @@ const Projects = () => {
               className="size-full object-cover object-center "
             />
           </div>
-          <button className="relative z-40 button mx-auto">Live Preview</button>
+          <button className="relative z-40 button mr-2">Live Preview</button>
         </div>
-        <div className="relative group bg-[#080908] shadow-text shadow-sm  rounded-2xl  col-span-3 pt-4 pb-2 px-4 cursor-pointer">
+        <div className="relative  h-[20rem] order-last min-[1100px]:order-none group bg-[#080908] shadow-text shadow-sm  rounded-2xl  col-span-4 min-[1100px]:col-span-3 pt-4 pb-2 px-4 cursor-pointer">
           <div className="relative w-full h-[80%] rounded-xl overflow-hidden mb-4">
             <div className="absolute z-10 inset-0 drop-shadow-lg rounded-xl bg-bg opacity-20"></div>
             <div className="absolute z-0 inset-0  rounded-xl bg-gradient-to-br from-bg to-transparent opacity-50"></div>
@@ -102,13 +105,13 @@ const Projects = () => {
             />
           </div>
           <div className="flex items-start justify-between px-4">
-            <div className="text-xl text-text font-header font-bold w-max">
+            <div className="text-lg md:text-xl text-text font-header font-bold w-max">
               Jobs Listing Website
             </div>
             <button className="relative z-40 button">Live Preview</button>
           </div>
         </div>
-        <div className="bg-[#080908] shadow-text shadow-sm rounded-2xl pt-4 px-4 cursor-pointer flex flex-col items-center">
+        <div className="bg-[#080908] hidden h-[20rem] shadow-text shadow-sm rounded-2xl pt-4 px-4 cursor-pointer min-[1100px]:flex flex-col items-center">
           <div className="group relative w-full h-[80%] rounded-xl overflow-hidden mb-4">
             <div className="absolute inset-0 rounded-lg opacity-40 bg-gradient-to-b from-bg to-transparent"></div>
             <div className="absolute inset-0 rounded-lg opacity-40 bg-gradient-to-t from-bg to-transparent"></div>

@@ -31,7 +31,7 @@ const AboutMe = () => {
   return (
     <div
       ref={container}
-      className="relative w-full max-w-[1540px] mx-auto   p-10 px-20  flex items-start gap-x-8"
+      className="relative w-full max-w-[1540px] mx-auto   p-10 px-20  flex flex-col md:flex-row items-center md:items-start gap-x-12 lg:gap-x-8"
     >
       <motion.div
         variants={varients}
@@ -42,14 +42,14 @@ const AboutMe = () => {
           type: 'tween',
           ease: 'easeInOut',
         }}
-        className="sticky top-20 basis-1/3  pt-4 px-4 flex flex-col"
+        className="static md:sticky top-20 w-[30%]  pt-4 px-4 flex flex-col"
       >
         <motion.div
           variants={varients}
           initial="initial"
           whileInView={'vissible'}
           transition={{ duration: 1.2, ease: 'easeInOut' }}
-          className="text-3xl text-text font-header font-bold mb-6 text-center"
+          className="text-2xl md:text-3xl  text-text font-header font-bold mb-6 text-center"
         >
           About <span className="text-accent">Me</span>
         </motion.div>
@@ -64,7 +64,7 @@ const AboutMe = () => {
           />
         </motion.div>
       </motion.div>
-      <div className="basis-2/3 h-full pt-20 px-4 space-y-6">
+      <div className="w-[90vw] md:w-2/3 h-full pt-20 px-4 space-y-6">
         <motion.div
           ref={target}
           style={{ y: y }}
@@ -90,7 +90,7 @@ const AboutMe = () => {
                       word === 'YONATANE' || word === 'MEKETE,'
                         ? 'text-accent'
                         : ' text-text'
-                    } text-2xl  font-body font-medium mr-2  antialiased`}
+                    } text-xl md:text-2xl  font-body font-medium mr-2  antialiased`}
                   >
                     {word}
                   </motion.span>
@@ -116,7 +116,7 @@ const AboutMe = () => {
                       word === 'clean,' || word === 'maintainable'
                         ? 'text-accent'
                         : ' text-text'
-                    } text-2xl  font-body font-medium mr-2   antialiased`}
+                    } text-xl md:text-2xl font-body font-medium mr-2   antialiased`}
                   >
                     {word}
                   </motion.span>
@@ -134,7 +134,7 @@ const AboutMe = () => {
                       word === 'Yonatane' || word === 'Mekete,'
                         ? 'text-text'
                         : ' text-textgrey'
-                    } text-2xl  font-body font-medium mr-2  antialiased opacity-15`}
+                    } text-xl md:text-2xl  font-body font-medium mr-2  antialiased opacity-15`}
                   >
                     {word}
                   </span>
@@ -151,7 +151,7 @@ const AboutMe = () => {
                       word === 'clean,' || word === 'maintainable'
                         ? 'text-text'
                         : ' text-textgrey'
-                    } text-2xl  font-body font-medium mr-2 antialiased opacity-15`}
+                    } text-xl md:text-2xl  font-body font-medium mr-2 antialiased opacity-15`}
                   >
                     {word}
                   </span>
@@ -164,10 +164,10 @@ const AboutMe = () => {
 
         {/* <div>Languages and Tools</div> */}
         <div className=" pt-4  pl-0">
-          <p className="text-3xl text-text font-header font-bold  mb-4">
+          <p className="text-xl md:text-3xl text-text font-header font-bold  mb-4">
             Languages and Tools
           </p>
-          <div className="h-[60vh]">
+          <div className=" h-[60vh]">
             <Tools />
           </div>
         </div>
@@ -184,7 +184,7 @@ const Tools = () => {
   return (
     <div
       className="relative grid place-content-center overflow-hidden size-full bg-bg border border-bgalt 
-    rounded-lg shadow-accent shadow-sm px-48 pt-10 pb-20"
+    rounded-lg shadow-accent shadow-sm px-20 pt-20 pb-20 lg:px-36 lg:py-28"
     >
       <IconCloud iconSlugs={slugs} />
     </div>
