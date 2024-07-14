@@ -158,7 +158,7 @@ const TextAnimation = () => {
       >
         <motion.div
           style={{ scale }}
-          className="size-full flex flex-col pt-10 pb-16"
+          className="size-full flex flex-col pt-10 pb-12"
         >
           <div className="absolute z-10 top-10 right-10 bg-text h-[20%] w-1"></div>
           <div className="absolute z-0 top-10 right-10 bg-accent w-[10%] h-1"></div>

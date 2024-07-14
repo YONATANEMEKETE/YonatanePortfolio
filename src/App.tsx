@@ -2,6 +2,8 @@
 import Lenis from 'lenis';
 import Home from './Pages/Home';
 import { useEffect } from 'react';
+// import Blogs from './Pages/Blogs';
+// import NotFound from './Pages/NotFound';
 
 function App() {
   useEffect(() => {
@@ -19,6 +21,8 @@ function App() {
   return (
     <div className="transition-colors  duration-300">
       <Home />
+      {/* <Blogs /> */}
+      {/* <NotFound /> */}
     </div>
   );
 }
