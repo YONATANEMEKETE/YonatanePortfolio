@@ -8,7 +8,7 @@ import { motion } from 'framer-motion';
 
 const Projects = () => {
   return (
-    <div className="w-full max-w-[1540px] mx-auto h-[80vw] pt-40 px-36 space-y-10">
+    <div className="w-full max-w-[1540px] mx-auto h-[80vw] min-[1500px]:h-[60vw] pt-40 px-36 space-y-10">
       <p className="text-5xl text-text font-header font-bold">
         Proj<span className="text-accent">ects</span>
       </p>

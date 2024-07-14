@@ -163,11 +163,11 @@ const AboutMe = () => {
         <button className="relative z-40  button">Hire Me</button>
 
         {/* <div>Languages and Tools</div> */}
-        <div className="h-[100vh]  pt-4  pl-0">
+        <div className=" pt-4  pl-0">
           <p className="text-3xl text-text font-header font-bold  mb-4">
             Languages and Tools
           </p>
-          <div className="h-[90%] ">
+          <div className="h-[60vh]">
             <Tools />
           </div>
         </div>
