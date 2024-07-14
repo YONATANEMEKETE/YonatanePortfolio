@@ -60,7 +60,7 @@ const Tab = ({ text, setPosition }: { text: string; setPosition: any }) => {
     <div
       ref={ref}
       onMouseEnter={handlePosition}
-      className="relative z-10 text-lg font-body font-bold text-white mix-blend-difference leading-3 p-4"
+      className="relative z-10 text-lg font-body font-bold text-white mix-blend-difference leading-3 p-4 px-2 min-[500px]:px-4"
     >
       {text}
     </div>

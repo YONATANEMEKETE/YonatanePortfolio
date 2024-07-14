@@ -31,10 +31,10 @@ const Footer = () => {
             <img
               src={linkidin}
               alt="social"
-              className="size-full object-cover object-center rounded-full"
+              className="size-full object-cover object-center "
             />
           </div>
-          <div className="size-[2rem] p-2 bg-bg rounded-full shadow-sm shadow-text cursor-pointer">
+          <div className="size-[2rem] p-2 bg-bg rounded-full shadow-sm shadow-accent cursor-pointer">
             <img
               src={telegram}
               alt="social"

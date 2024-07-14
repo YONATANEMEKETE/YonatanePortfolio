@@ -11,11 +11,13 @@ const Hero = () => {
   const words = [
     {
       text: 'YONATANE',
-      className: 'text-5xl text-text font-header font-extrabold mb-4',
+      className:
+        'text-3xl md:text-5xl text-text font-header font-extrabold mb-4',
     },
     {
       text: 'MEKETE',
-      className: 'text-5xl text-accent font-header font-extrabold mb-4',
+      className:
+        'text-3xl md:text-5xl text-accent font-header font-extrabold mb-4',
     },
   ];
 
@@ -53,7 +55,7 @@ const Hero = () => {
             duration: 1.5,
             ease: 'easeInOut',
           }}
-          className="text-3xl text-textgrey font-body font-semibold mb-10"
+          className="text-2xl  md:text-3xl text-textgrey font-body font-semibold mb-10"
         >
           FrontEnd Developer
         </motion.p>
@@ -162,7 +164,7 @@ const TextAnimation = () => {
           <div className="absolute z-0 top-10 right-10 bg-accent w-[10%] h-1"></div>
           <div className="absolute z-10 left-10 bottom-16 bg-accent w-[10%] h-1"></div>
           <div className="absolute left-10 bottom-16 bg-text h-[20%] w-1"></div>
-          <div className="basis-1/3  w-[60%] pl-10">
+          <div className="basis-1/3  w-[80%] pl-10">
             <div className="size-fit overflow-hidden">
               <motion.p
                 initial={{ y: '100%' }}
@@ -172,7 +174,7 @@ const TextAnimation = () => {
                   duration: 0.8,
                   ease: 'easeInOut',
                 }}
-                className="text-text text-[5rem] font-header font-extrabold leading-[1] drop-shadow-2xl"
+                className="text-text text-3xl md:text-[3.5rem] lg:text-[5rem] font-header font-extrabold leading-[1] drop-shadow-2xl"
               >
                 USER CENTERED
               </motion.p>
@@ -186,7 +188,7 @@ const TextAnimation = () => {
                   duration: 0.8,
                   ease: 'easeInOut',
                 }}
-                className="text-accent text-[5rem] font-header font-extrabold leading-[1] drop-shadow-2xl"
+                className="text-accent text-3xl md:text-[3.5rem] lg:text-[5rem] font-header font-extrabold leading-[1] drop-shadow-2xl"
               >
                 DESIGNS
               </motion.p>
@@ -198,25 +200,25 @@ const TextAnimation = () => {
           <div className="basis-1/3 w-[80%] mx-auto self-center flex-wrap  grid place-content-center mb-6">
             <motion.p
               style={{ scale: scale2, opacity }}
-              className="text-accent text-center text-2xl font-header font-extrabold mb-6"
+              className="text-accent text-center text-[0.5rem] md:text-lg lg:text-2xl font-header font-extrabold pb-1 md:mb-2 lg:mb-4"
             >
               ACCESSIBLE
             </motion.p>
             <motion.p
               style={{ scale: scale2, opacity }}
-              className="text-text text-center text-2xl font-header font-extrabold "
+              className="text-text text-center text-[0.5rem] md:text-lg lg:text-2xl font-header font-extrabold "
             >
               INTERFACE
             </motion.p>
           </div>
-          <div className="basis-1/3 flex flex-col justify-end  self-end w-[50%] pr-10">
+          <div className="basis-1/3 flex flex-col justify-end  self-end w-[70%] pr-10">
             <div className="w-full h-fit text-end overflow-hidden ">
               <motion.p
                 initial={{ y: '100%' }}
                 whileInView={{ y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, ease: 'easeInOut' }}
-                className="w-full text-end text-accent text-[5rem] font-header font-extrabold leading-[1] drop-shadow-2xl"
+                className="w-full text-end text-accent text-3xl md:text-[3.5rem] lg:text-[5rem] font-header font-extrabold leading-[1] drop-shadow-2xl"
               >
                 FAST
               </motion.p>
@@ -227,7 +229,7 @@ const TextAnimation = () => {
                 whileInView={{ y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, ease: 'easeInOut' }}
-                className="w-full text-end text-text text-[5rem] font-header font-extrabold leading-[1] drop-shadow-2xl"
+                className="w-full text-end text-text text-3xl md:text-[3.5rem] lg:text-[5rem] font-header font-extrabold leading-[1] drop-shadow-2xl"
               >
                 LOADING TIME
               </motion.p>
