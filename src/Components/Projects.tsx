@@ -8,11 +8,11 @@ import { motion } from 'framer-motion';
 
 const Projects = () => {
   return (
-    <div className="w-full overflow-hidden max-w-[1540px] mx-auto h-max min-[1500px]:h-[60vw] pt-40 px-4 md:px-12 lg:px-20 xl:px-36 space-y-10">
+    <div className="w-full  overflow-hidden max-w-[1540px] mx-auto h-max min-[1500px]:h-[60vw] pt-40 px-4 md:px-12 lg:px-20 xl:px-36 space-y-10">
       <p className="text-2xl md:text-3xl lg:text-5xl  text-text font-header font-bold">
         Proj<span className="text-accent">ects</span>
       </p>
-      <div className="w-full min-w-[350px] h-fit grid grid-cols-4 grid-rows-4 min-[1100px]:grid-cols-5 min-[1100px]:grid-rows-3  gap-4 ">
+      <div className="w-full min-w-[350px] h-max grid grid-cols-4 grid-rows-3 min-[1100px]:grid-cols-5 min-[1100px]:grid-rows-2  gap-4 ">
         <div className="relative h-[20rem] group bg-[#080908]  shadow-text shadow-sm  rounded-2xl col-span-4 min-[1100px]:col-span-3 pt-4 pb-2 px-4 cursor-pointer">
           <div className="relative w-full h-[80%] rounded-xl overflow-hidden mb-4">
             <div className="absolute z-10 inset-0 drop-shadow-lg rounded-xl bg-bg opacity-20"></div>
@@ -105,7 +105,7 @@ const Projects = () => {
             />
           </div>
           <div className="flex items-start justify-between px-4">
-            <div className="text-lg md:text-xl text-text font-header font-bold w-max">
+            <div className="text-base md:text-xl text-text font-header font-bold w-max">
               Jobs Listing Website
             </div>
             <button className="relative z-40 button">Live Preview</button>
