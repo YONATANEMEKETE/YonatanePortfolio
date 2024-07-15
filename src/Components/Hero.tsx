@@ -6,6 +6,7 @@ import ButtonHero2 from './ui/ButtonHero2';
 import { infiniteScrolls } from '@/Data/Data';
 import { useRef } from 'react';
 import profilepic from '../assets/profilepic.png';
+import useCursor from '@/Services/Cursor';
 
 const Hero = () => {
   const words = [
@@ -77,6 +78,8 @@ const Hero = () => {
 export default Hero;
 
 const InfiniteScroll = ({ rotate }: { rotate?: string }) => {
+  const { setHovered, setNotHovered } = useCursor();
+
   return (
     <div className=" w-full bg-transparent mb-32">
       <div
@@ -98,12 +101,14 @@ const InfiniteScroll = ({ rotate }: { rotate?: string }) => {
           className="w-[90%]  mx-auto flex items-center gap-x-16 flex-nowrap"
         >
           {infiniteScrolls.map((item, index) => (
-            <p
+            <motion.p
+              onMouseEnter={setHovered}
+              onMouseLeave={setNotHovered}
               className="text-3xl text-text opacity-50 cursor-pointer hover:opacity-90 transition-all duration-500 font-header font-medium italic shrink-0"
               key={index}
             >
               {item}
-            </p>
+            </motion.p>
           ))}
         </motion.div>
       </div>
@@ -126,12 +131,14 @@ const InfiniteScroll = ({ rotate }: { rotate?: string }) => {
           className="w-[90%]  mx-auto flex items-center gap-x-16 flex-nowrap"
         >
           {infiniteScrolls.map((item, index) => (
-            <p
+            <motion.p
+              onMouseEnter={setHovered}
+              onMouseLeave={setNotHovered}
               className="text-3xl text-text opacity-50 cursor-pointer hover:opacity-90 transition-all duration-500 font-header font-medium italic shrink-0"
               key={index}
             >
               {item}
-            </p>
+            </motion.p>
           ))}
         </motion.div>
       </div>
