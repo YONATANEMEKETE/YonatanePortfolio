@@ -2,7 +2,10 @@ import { github, linkidin, telegram, x } from '@/assets/Icons/Icons';
 
 const Footer = () => {
   return (
-    <div className="mt-36 bg-bg lg:mt-52  pb-20 w-full max-w-[1300px] mx-auto">
+    <section
+      id="footer"
+      className="mt-36 bg-bg lg:mt-52  pb-20 w-full max-w-[1300px] mx-auto"
+    >
       <div className="text-text text-2xl md:text-5xl font-header font-extrabold text-center mb-6">
         YONATANE <span className="text-accent">MEKETE</span>
       </div>
@@ -43,7 +46,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

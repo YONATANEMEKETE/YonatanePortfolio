@@ -22,7 +22,7 @@ const Hero = () => {
   ];
 
   return (
-    <div className="relative z-0 pt-48">
+    <section id="hero" className="relative z-0 pt-48">
       <BgPattern />
       <div className="w-max h-fit mx-auto flex flex-col items-center mb-32">
         <motion.div
@@ -70,7 +70,7 @@ const Hero = () => {
       <InfiniteScroll rotate="rotate-[1.5deg]" />
 
       <TextAnimation />
-    </div>
+    </section>
   );
 };
 

@@ -31,7 +31,12 @@ const Navigation = () => {
       className="fixed z-10 top-6 left-[50%] -translate-x-[50%] w-fit h-fit px-1 py-1 bg-bg border border-text rounded-xl  shadow-lg flex items-center gap-x-2 cursor-pointer"
     >
       {navs.map((nav) => (
-        <Tab key={nav.text} text={nav.text} setPosition={setPosition} />
+        <Tab
+          key={nav.text}
+          text={nav.text}
+          link={nav.link}
+          setPosition={setPosition}
+        />
       ))}
       <motion.div
         animate={position}
@@ -41,7 +46,15 @@ const Navigation = () => {
   );
 };
 
-const Tab = ({ text, setPosition }: { text: string; setPosition: any }) => {
+const Tab = ({
+  text,
+  setPosition,
+  link,
+}: {
+  text: string;
+  setPosition: any;
+  link: string;
+}) => {
   const ref = useRef<HTMLDivElement>(null);
 
   const handlePosition = () => {
@@ -57,13 +70,15 @@ const Tab = ({ text, setPosition }: { text: string; setPosition: any }) => {
   };
 
   return (
-    <div
-      ref={ref}
-      onMouseEnter={handlePosition}
-      className="relative z-10 text-lg font-body font-bold text-white mix-blend-difference leading-3 p-4 px-2 min-[500px]:px-4"
-    >
-      {text}
-    </div>
+    <a href={link}>
+      <div
+        ref={ref}
+        onMouseEnter={handlePosition}
+        className="relative z-10 text-lg font-body font-bold text-white mix-blend-difference leading-3 p-4 px-2 min-[500px]:px-4"
+      >
+        {text}
+      </div>
+    </a>
   );
 };
 

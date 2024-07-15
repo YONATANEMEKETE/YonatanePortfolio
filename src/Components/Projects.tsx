@@ -8,7 +8,10 @@ import { motion } from 'framer-motion';
 
 const Projects = () => {
   return (
-    <div className="w-full  overflow-hidden max-w-[1540px] mx-auto h-max min-[1500px]:h-[60vw] pt-40 px-4 md:px-12 lg:px-20 xl:px-36 space-y-10">
+    <section
+      id="projects"
+      className="w-full  overflow-hidden max-w-[1540px] mx-auto h-max min-[1500px]:h-[60vw] pt-40 xl:pt-80 px-4 md:px-12 lg:px-20 xl:px-36 space-y-10"
+    >
       <p className="text-2xl md:text-3xl lg:text-5xl  text-text font-header font-bold">
         Proj<span className="text-accent">ects</span>
       </p>
@@ -27,7 +30,9 @@ const Projects = () => {
             <div className="text-base md:text-xl text-text font-header font-bold w-max">
               Slack Clone Website
             </div>
-            <button className="relative z-40 button">Live Preview</button>
+            <a href="https://slack-clone-23.vercel.app/" target="_blank">
+              <button className="relative z-40 button">Live Preview</button>
+            </a>
           </div>
         </div>
 
@@ -92,7 +97,9 @@ const Projects = () => {
               className="size-full object-cover object-center "
             />
           </div>
-          <button className="relative z-40 button mr-2">Live Preview</button>
+          <a href="https://storeeeshop.vercel.app/" target="_blank">
+            <button className="relative z-40 button mr-2">Live Preview</button>
+          </a>
         </div>
         <div className="relative  h-[20rem] order-last min-[1100px]:order-none group bg-[#080908] shadow-text shadow-sm  rounded-2xl  col-span-4 min-[1100px]:col-span-3 pt-4 pb-2 px-4 cursor-pointer">
           <div className="relative w-full h-[80%] rounded-xl overflow-hidden mb-4">
@@ -108,7 +115,9 @@ const Projects = () => {
             <div className="text-base md:text-xl text-text font-header font-bold w-max">
               Jobs Listing Website
             </div>
-            <button className="relative z-40 button">Live Preview</button>
+            <a href="https://jobsdream.vercel.app/" target="_blank">
+              <button className="relative z-40 button">Live Preview</button>
+            </a>
           </div>
         </div>
         <div className="bg-[#080908] hidden h-[20rem] shadow-text shadow-sm rounded-2xl pt-4 px-4 cursor-pointer min-[1100px]:flex flex-col items-center">
@@ -121,10 +130,17 @@ const Projects = () => {
               className="size-full object-cover object-center "
             />
           </div>
-          <button className="relative z-40 button mx-auto">Source Code</button>
+          <a
+            href="https://github.com/YONATANEMEKETE/React-Travel-Website"
+            target="_blank"
+          >
+            <button className="relative z-40 button mx-auto">
+              Source Code
+            </button>
+          </a>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

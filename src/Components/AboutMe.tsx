@@ -29,7 +29,8 @@ const AboutMe = () => {
     },
   };
   return (
-    <div
+    <section
+      id="about"
       ref={container}
       className="relative w-full max-w-[1540px] mx-auto   p-10 px-20  flex flex-col md:flex-row items-center md:items-start gap-x-12 lg:gap-x-8"
     >
@@ -172,7 +173,7 @@ const AboutMe = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -24,19 +24,19 @@ import {
 const navs = [
   {
     text: 'Home',
-    link: '/',
+    link: '#hero',
   },
   {
     text: 'About',
-    link: '/about',
+    link: '#about',
   },
   {
     text: 'Projects',
-    link: '/projects',
+    link: '#projects',
   },
   {
     text: 'Blogs',
-    link: '/blogs',
+    link: '#blogs',
   },
 ];
 
