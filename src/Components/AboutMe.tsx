@@ -91,7 +91,7 @@ const AboutMe = () => {
                       word === 'YONATANE' || word === 'MEKETE,'
                         ? 'text-accent'
                         : ' text-text'
-                    } text-xl md:text-2xl  font-body font-medium mr-2  antialiased`}
+                    } text-xl md:text-xl  font-body font-medium mr-2  antialiased`}
                   >
                     {word}
                   </motion.span>
@@ -117,7 +117,7 @@ const AboutMe = () => {
                       word === 'clean,' || word === 'maintainable'
                         ? 'text-accent'
                         : ' text-text'
-                    } text-xl md:text-2xl font-body font-medium mr-2   antialiased`}
+                    } text-xl md:text-xl font-body font-medium mr-2   antialiased`}
                   >
                     {word}
                   </motion.span>
@@ -135,7 +135,7 @@ const AboutMe = () => {
                       word === 'Yonatane' || word === 'Mekete,'
                         ? 'text-text'
                         : ' text-textgrey'
-                    } text-xl md:text-2xl  font-body font-medium mr-2  antialiased opacity-15`}
+                    } text-xl md:text-xl  font-body font-medium mr-2  antialiased opacity-15`}
                   >
                     {word}
                   </span>
@@ -152,7 +152,7 @@ const AboutMe = () => {
                       word === 'clean,' || word === 'maintainable'
                         ? 'text-text'
                         : ' text-textgrey'
-                    } text-xl md:text-2xl  font-body font-medium mr-2 antialiased opacity-15`}
+                    } text-xl md:text-xl  font-body font-medium mr-2 antialiased opacity-15`}
                   >
                     {word}
                   </span>

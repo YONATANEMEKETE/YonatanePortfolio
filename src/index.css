@@ -179,7 +179,7 @@ li:hover::after {
   transition: all 0.3s ease;
   font-size: large;
   font-weight: medium;
-  font-family: var(--header);
+  font-family: var(--body);
 }
 
 .icons:hover .tooltip {
@@ -216,7 +216,7 @@ li:hover::after {
 
 .icons a .filled {
   position: absolute;
-  /* top: auto; */
+  top: auto;
   bottom: 0;
   left: 0;
   width: 100%;

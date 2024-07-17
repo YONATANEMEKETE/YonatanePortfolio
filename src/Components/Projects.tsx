@@ -10,9 +10,9 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="w-full  overflow-hidden max-w-[1540px] mx-auto h-max min-[1500px]:h-[60vw] pt-40 xl:pt-80 px-4 md:px-12 lg:px-20 xl:px-36 space-y-10"
+      className="w-full  overflow-hidden max-w-[1540px] mx-auto h-max min-[1500px]:h-[60vw] pt-40 xl:pt-80 px-4 md:px-12 lg:px-20 xl:px-36 space-y-20"
     >
-      <p className="text-2xl md:text-3xl lg:text-5xl  text-text font-header font-bold">
+      <p className="text-2xl md:text-3xl lg:text-7xl text-center  text-text font-header font-bold">
         Proj<span className="text-accent">ects</span>
       </p>
       <div className="w-full min-w-[350px] h-max grid grid-cols-4 grid-rows-3 min-[1100px]:grid-cols-5 min-[1100px]:grid-rows-2  gap-4 ">
