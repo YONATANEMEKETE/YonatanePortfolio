@@ -161,7 +161,9 @@ const AboutMe = () => {
             </div>
           </div>
         </motion.div>
-        <button className="relative z-40  button">Hire Me</button>
+        <a href="#footer">
+          <button className="relative z-40  button">Let's Talk</button>
+        </a>
 
         {/* <div>Languages and Tools</div> */}
         <div className=" pt-4  pl-0">
