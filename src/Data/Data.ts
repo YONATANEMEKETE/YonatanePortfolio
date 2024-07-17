@@ -35,8 +35,8 @@ const navs = [
     link: '#projects',
   },
   {
-    text: 'Blogs',
-    link: '#blogs',
+    text: 'Services',
+    link: '#services',
   },
 ];
 

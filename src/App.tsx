@@ -1,9 +1,8 @@
-// import reactLogo from './assets/react.svg';
 import Lenis from 'lenis';
 import Home from './Pages/Home';
 import { useEffect } from 'react';
-// import Blogs from './Pages/Blogs';
-// import NotFound from './Pages/NotFound';
+import { Routes, Route } from 'react-router-dom';
+import NotFound from './Pages/NotFound';
 
 function App() {
   useEffect(() => {
@@ -20,7 +19,11 @@ function App() {
 
   return (
     <div className="transition-colors  duration-300">
-      <Home />
+      <Routes>
+        <Route path="/" element={<Home />} key="home" />
+        <Route path="*" element={<NotFound />} key="404" />
+      </Routes>
+      {/* <Home /> */}
       {/* <Blogs /> */}
       {/* <NotFound /> */}
     </div>
