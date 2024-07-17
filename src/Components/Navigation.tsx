@@ -28,7 +28,7 @@ const Navigation = () => {
         damping: 10,
       }}
       onMouseLeave={handleMouseLeave}
-      className="fixed z-10 top-6 left-[50%] -translate-x-[50%] w-fit h-fit px-1 py-1 bg-bg border border-text rounded-xl  shadow-lg flex items-center gap-x-2 cursor-pointer"
+      className="fixed z-40 top-6 left-[50%] -translate-x-[50%] w-fit h-fit px-1 py-1 bg-bg border border-text rounded-xl  shadow-lg flex items-center gap-x-2 cursor-pointer"
     >
       {navs.map((nav) => (
         <Tab

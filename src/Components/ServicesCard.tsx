@@ -3,7 +3,7 @@ import { services } from '@/Data/Data';
 
 const ServicesCard = () => {
   return (
-    <div className="max-w-5xl mx-auto px-8">
+    <div className="max-w-[1100px] mx-auto px-8">
       <HoverEffect items={services} />
     </div>
   );

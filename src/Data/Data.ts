@@ -154,7 +154,7 @@ const services = [
       'Ensuring websites are fully functioning and look great on all devices (desktops, tablets, and mobiles).',
   },
   {
-    title: 'single page Application(SPA)',
+    title: 'Single Page Application(SPA)',
     description:
       'Developing fast, interactive SPAs using frameworks like React.js.',
   },
