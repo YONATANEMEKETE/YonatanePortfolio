@@ -147,6 +147,38 @@ const socials = [
   },
 ];
 
+const services = [
+  {
+    title: 'Responsive Design',
+    description:
+      'Ensuring websites are fully functioning and look great on all devices (desktops, tablets, and mobiles).',
+  },
+  {
+    title: 'single page Application(SPA)',
+    description:
+      'Developing fast, interactive SPAs using frameworks like React.js.',
+  },
+  {
+    title: 'User Experience (UX)',
+    description:
+      'Enhancing user satisfaction by improving the usability and accessibility of websites.',
+  },
+  {
+    title: 'User Interface (UI)',
+    description: 'Ensuring websites are visually appealing and user-friendly.',
+  },
+  {
+    title: 'Project Planning',
+    description:
+      'Assisting in project planning and strategy to ensure smooth development processes.',
+  },
+  {
+    title: 'Performance Optimization',
+    description:
+      'Ensuring fast load times and high performance for better user experience and SEO.',
+  },
+];
+
 export {
   navs,
   infiniteScrolls,
@@ -158,4 +190,5 @@ export {
   socials,
   heroCardImages,
   tools,
+  services,
 };
