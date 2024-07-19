@@ -1,3 +1,4 @@
+// import BgPattern from './ui/BgPattern';
 import BgPattern from './ui/BgPattern';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { TypewriterEffect } from './ui/TypewritterEffect';
@@ -37,7 +38,6 @@ const Hero = () => {
         hover:ring-accent transition-all duration-300 mb-6 cursor-pointer"
         >
           <img
-            // src="https://ik.imagekit.io/6qizpphtd1/Profile%20Pics/About.png?"
             src={profilepic}
             alt="yonatane's picture"
             className="object-cover w-full h-full object-center"
@@ -45,9 +45,6 @@ const Hero = () => {
         </motion.div>
 
         <TypewriterEffect words={words} />
-        {/* <motion.p className="text-5xl text-text font-header font-extrabold mb-4">
-          YONATENE MEKETE
-        </motion.p> */}
 
         <motion.p
           initial={{ opacity: 0, y: 40 }}
